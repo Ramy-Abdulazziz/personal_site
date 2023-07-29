@@ -11,7 +11,6 @@ const validateTheme = (userTheme) => {
   return userTheme === "dark" ? darkTheme : lightTheme;
 };
 
-
 function App() {
   const [setUserTheme, userTheme] = useState("light");
 
