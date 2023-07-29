@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Toolbar from "./components/toolbar";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import { useState } from "react";
+
+const darkTheme = createTheme({ palette: { mode: "dark" } });
+const lightTheme = createTheme({ palette: { mode: "light" } });
+
+const validateTheme = (userTheme) => {
+  return userTheme === "dark" ? darkTheme : lightTheme;
+};
+
 
 function App() {
+  const [setUserTheme, userTheme] = useState("light");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={validateTheme(userTheme)}>
+      <Toolbar setUserTheme={setUserTheme} userTheme={userTheme} />
+    </ThemeProvider>
   );
 }
 
