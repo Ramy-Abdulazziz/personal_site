@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from '@mui/material/CssBaseline';
 
 import { useState } from "react";
+import ChatWindow from "./components/chatWindow";
 
 function App() {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
@@ -21,11 +22,7 @@ function App() {
       <CssBaseline/>
       <NavBar setUserTheme={setUserTheme} userTheme={userTheme} />
       <Container disableGutters sx={{ mt: 5 }}>
-        <Paper elevation={4} sx={{ minHeight: 500, pt: 10, pl: 5, pr: 5 }}>
-          <Paper elevation={6} sx={{ pt: 10 }}>
-            This is content
-          </Paper>
-        </Paper>
+        <ChatWindow/>
       </Container>
     </ThemeProvider>
   );
