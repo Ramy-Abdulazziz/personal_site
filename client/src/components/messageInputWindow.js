@@ -27,20 +27,12 @@ export default function MessageInputWindow() {
     resolver: yupResolver(validationSchema),
   });
 
-  const handleOnSubmit = () => {
-
-    
-
-  }
+  const handleOnSubmit = () => {};
   return (
-    <Container disableGutters sx={{ mt: 2 }}>
+    <Container disableGutters sx={{ mt: 2, pb: 2 }}>
       <Box>
         <Stack direction={"row"}>
-          <TextField
-            id="user-input"
-            defaultValue={"Write your new prompt here"}
-            className="messageInputWindow"
-          />
+          <TextField id="user-input" className="messageInputWindow" />
           <Button variant="contained" sx={{ borderRadius: 5, ml: 2 }}>
             Send
           </Button>

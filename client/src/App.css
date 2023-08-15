@@ -1,3 +1,23 @@
-.messageInputWindow{
-    width: 100%;
+.messageInputWindow {
+  width: 100%;
+}
+
+.usernameField {
+  width: 100%;
+}
+
+.chatPrompt {
+  width: 80%;
+  border-radius: 5%;
+}
+
+.chatResponse {
+  width: 80%;
+  border-radius: 5%;
+
+}
+
+.chatWindow{
+    max-height: 600px;
+    overflow: auto;
 }

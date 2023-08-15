@@ -6,14 +6,14 @@ export default function ChatWindow() {
   return (
     <Container disableGutters sx={{ mt: 5 }}>
       <Paper
-        elevation={2}
+        elevation={4}
         sx={{
           minHeight: 500,
-          pt: 5,
-          pl: 5,
-          pr: 5,
-          ml: 5,
-          mr: 5,
+          pt: 2,
+          pl: 2,
+          pr: 2,
+          ml: 2,
+          mr: 2,
           borderRadius: 3,
         }}
       >
